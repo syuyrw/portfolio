@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -m http.server 8000)",
+      "Bash(curl -s http://localhost:8000)",
+      "Bash(pkill -f \"python3 -m http.server\")",
+      "Bash(python3 -m http.server 8000 > /tmp/server.log 2>&1 & *)",
+      "Bash(curl -s http://localhost:8000/index.html)",
+      "Bash(chromium-cli screenshot *)",
+      "Bash(cat)",
+      "Bash(bash /tmp/check_responsive.sh)",
+      "Bash(bash /tmp/check_issues.sh)",
+      "Bash(curl -s -X POST -H 'Content-Type: text/html; charset=utf-8' --data-binary @- https://validator.w3.org/nu/?out=json)",
+      "Bash(python3)",
+      "Read(//tmp/**)"
+    ],
+    "additionalDirectories": [
+      "/private/tmp"
+    ]
+  }
+}
